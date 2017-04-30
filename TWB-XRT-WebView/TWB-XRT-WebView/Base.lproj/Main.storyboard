@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eQt-vU-CN0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--黃金-->
+        <scene sceneID="vEW-n9-lg6">
+            <objects>
+                <viewController id="4A0-4F-ios" customClass="GoldViewController" customModule="TWB_XRT_WebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MUZ-ac-ZTw"/>
+                        <viewControllerLayoutGuide type="bottom" id="mrX-vh-dF3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yQg-7Q-bX6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SEx-Wb-n6e">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="黃金" id="DTW-JT-B8U">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; 返回" id="1aD-qn-pwK">
+                                            <connections>
+                                                <action selector="backPage:" destination="4A0-4F-ios" id="FoS-aU-gWQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="B9Q-Da-tJx">
+                                            <connections>
+                                                <action selector="reloadPage:" destination="4A0-4F-ios" id="LLh-YK-1Ba"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8H2-6R-fKv">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="SEx-Wb-n6e" firstAttribute="leading" secondItem="yQg-7Q-bX6" secondAttribute="leading" id="6j0-mX-1AS"/>
+                            <constraint firstItem="8H2-6R-fKv" firstAttribute="top" secondItem="SEx-Wb-n6e" secondAttribute="bottom" id="9Cr-Hp-XXU"/>
+                            <constraint firstItem="SEx-Wb-n6e" firstAttribute="top" secondItem="MUZ-ac-ZTw" secondAttribute="bottom" id="NeL-mo-P05"/>
+                            <constraint firstAttribute="trailing" secondItem="8H2-6R-fKv" secondAttribute="trailing" id="OXJ-Xa-bWC"/>
+                            <constraint firstAttribute="trailing" secondItem="SEx-Wb-n6e" secondAttribute="trailing" id="Q1X-UE-eid"/>
+                            <constraint firstItem="8H2-6R-fKv" firstAttribute="leading" secondItem="yQg-7Q-bX6" secondAttribute="leading" id="Tlc-Eq-3m4"/>
+                            <constraint firstItem="8H2-6R-fKv" firstAttribute="top" secondItem="SEx-Wb-n6e" secondAttribute="bottom" id="wpb-7x-4QS"/>
+                            <constraint firstItem="mrX-vh-dF3" firstAttribute="top" secondItem="8H2-6R-fKv" secondAttribute="bottom" id="xXE-Ye-TGG"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="黃金" image="Gold Bars-50.png" selectedImage="Gold Bars Filled-50.png" id="djg-Rr-sjS"/>
+                    <connections>
+                        <outlet property="goldWebView" destination="8H2-6R-fKv" id="u4X-21-JUh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XnQ-cB-fLi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="351.19999999999999" y="331.48425787106447"/>
+        </scene>
+        <!--匯率-->
+        <scene sceneID="sU4-dS-UXk">
+            <objects>
+                <viewController id="pYu-O8-3Gf" customClass="CurrencyViewController" customModule="TWB_XRT_WebView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6ks-Wy-tue"/>
+                        <viewControllerLayoutGuide type="bottom" id="G0E-Sa-gbS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="9Ic-ns-3jd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mQB-7J-zCc">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="匯率" id="qRL-bS-bhE">
+                                        <barButtonItem key="leftBarButtonItem" title="&lt; 返回" id="fE4-YI-tCT">
+                                            <connections>
+                                                <action selector="backPage:" destination="pYu-O8-3Gf" id="aqs-EF-bYc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="RnC-jO-JUw">
+                                            <connections>
+                                                <action selector="reloadPage:" destination="pYu-O8-3Gf" id="VFG-yS-NqZ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sin-gX-oSD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" red="0.28958413004875183" green="0.31462949514389038" blue="0.32950475811958313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mQB-7J-zCc" firstAttribute="top" secondItem="6ks-Wy-tue" secondAttribute="bottom" id="2QX-F3-WY1"/>
+                            <constraint firstAttribute="trailing" secondItem="mQB-7J-zCc" secondAttribute="trailing" id="3OR-Bg-giD"/>
+                            <constraint firstAttribute="trailing" secondItem="Sin-gX-oSD" secondAttribute="trailing" id="Emc-NM-rJa"/>
+                            <constraint firstItem="G0E-Sa-gbS" firstAttribute="top" secondItem="Sin-gX-oSD" secondAttribute="bottom" id="OE9-AL-ery"/>
+                            <constraint firstItem="mQB-7J-zCc" firstAttribute="leading" secondItem="9Ic-ns-3jd" secondAttribute="leading" id="XMH-Dg-e1l"/>
+                            <constraint firstItem="Sin-gX-oSD" firstAttribute="leading" secondItem="9Ic-ns-3jd" secondAttribute="leading" id="a3U-7A-dgF"/>
+                            <constraint firstItem="Sin-gX-oSD" firstAttribute="top" secondItem="mQB-7J-zCc" secondAttribute="bottom" id="vBy-jX-h6U"/>
+                            <constraint firstItem="Sin-gX-oSD" firstAttribute="top" secondItem="mQB-7J-zCc" secondAttribute="bottom" id="y0G-i6-axC"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="匯率" image="Money-50.png" selectedImage="Money Filled-50.png" id="Fip-uh-CPt"/>
+                    <connections>
+                        <outlet property="currencyWebView" destination="Sin-gX-oSD" id="SJ6-WN-C9W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4lN-g4-avU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationBar contentMode="scaleToFill" id="Ay2-NH-fq0">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="4am-in-GjZ"/>
+                    </items>
+                </navigationBar>
+            </objects>
+            <point key="canvasLocation" x="351.19999999999999" y="-366.56671664167919"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="cdF-dr-d9O">
+            <objects>
+                <tabBarController id="eQt-vU-CN0" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="jYS-ID-E10">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="pYu-O8-3Gf" kind="relationship" relationship="viewControllers" id="y9C-5J-spK"/>
+                        <segue destination="4A0-4F-ios" kind="relationship" relationship="viewControllers" id="wKE-zX-3Zz"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9UI-fv-tzP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-414" y="-44"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Gold Bars Filled-50.png" width="25" height="25"/>
+        <image name="Gold Bars-50.png" width="25" height="25"/>
+        <image name="Money Filled-50.png" width="25" height="25"/>
+        <image name="Money-50.png" width="25" height="25"/>
+    </resources>
+</document>
